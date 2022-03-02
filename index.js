@@ -41,6 +41,9 @@ client.once('ready', () => {
     }});
 });
 */
+
+// Since nothing is really working or in the correct state right now, I am just going to put some ideas and maybe do some testing of certain things, though it likely will not work. 
+
 client.on('messageCreate', message => {
     if (message.activity.bot) return;
     
