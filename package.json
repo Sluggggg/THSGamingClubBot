@@ -1,26 +1,30 @@
 {
-    "name": "vscode",
-    "version": "1.0.0",
-    "main": "snailbot.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "description": "",
-    "dependencies": {
-      "@discordjs/builders": "^0.8.2",
-      "@discordjs/opus": "^0.5.3",
-      "@discordjs/rest": "^0.1.0-canary.0",
-      "@discordjs/voice": "^0.7.5",
-      "discord-api-types": "^0.24.0",
-      "discord-music-player": "^8.3.1",
-      "discord.js": "^13.3.1",
-      "dotenv": "^10.0.0",
-      "ffmpeg": "^0.0.4",
-      "fluent-ffmpeg": "^2.1.2",
-      "ytdl-core": "^4.9.1"
-    }
+  "name": "thsgamingclubbot",
+  "version": "1.0.0",
+  "description": "Discord Bot for the THS Gaming Club Server",
+  "main": "bot.js",
+  "scripts": {
+    "dev": "nodemon bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sluggggg/THSGamingClubBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sluggggg/THSGamingClubBot/issues"
+  },
+  "homepage": "https://github.com/Sluggggg/THSGamingClubBot#readme",
+  "dependencies": {
+    "@discordjs/builders": "^0.12.0",
+    "@discordjs/rest": "^0.3.0",
+    "discord-api-types": "^0.29.0",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
-  
+}
