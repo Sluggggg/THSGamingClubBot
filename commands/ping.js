@@ -5,6 +5,9 @@ module.exports = {
         .setName('ping')
         .setDescription('Pong!'),
     async execute(interaction) {
-        interaction.reply('Pong!');
+        interaction.reply({
+            content: 'Pong!',
+            emphemeral: true
+        });
     }
 }

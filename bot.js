@@ -39,8 +39,7 @@ client.once("ready", () => {
                 });
                 console.log('Successfully registered commands globally.');
             } else {
-                await rest.put(Routes.applicationGuildCommands(CLIENT_ID, process.env.GUILD_ID)
-                , {
+                await rest.put(Routes.applicationGuildCommands(CLIENT_ID, process.env.GUILD_ID), {
                     body: commands
                 });
                 console.log('Successfully registered commands locally.');
@@ -49,6 +48,25 @@ client.once("ready", () => {
             if (err) console.error(err);
         }
     })();
+});
+
+client.on('intactionCreate', async interaction => {
+    if (!interaction.isCommand()) return;
+
+    const command = client.commands.get(interaction.commandName);
+
+    if (!command) return;
+    
+    try {
+        await command.execute(interaction);
+    } catch(err) {
+        if (err) console.error(err);
+
+        await interaction.reply({
+            content: 'An error occurred while executing that command.',
+            emphemeral: true
+        });
+    }
 });
 
 client.login(process.env.TOKEN);
