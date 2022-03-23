@@ -64,7 +64,7 @@ client.on('intactionCreate', async interaction => {
 
         await interaction.reply({
             content: 'An error occurred while executing that command.',
-            emphemeral: true
+            ephemeral: true
         });
     }
 });
