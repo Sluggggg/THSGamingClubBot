@@ -3,6 +3,7 @@ const fs = require('fs');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 const { Client, Intents, Collection } = require('discord.js');
+
 const client = new Client({
     intents: [
         Intents.FLAGS.GUILDS,
@@ -50,7 +51,7 @@ client.once("ready", () => {
     })();
 });
 
-client.on('intactionCreate', async interaction => {
+client.on('interactionCreate', async interaction => {
     if (!interaction.isCommand()) return;
 
     const command = client.commands.get(interaction.commandName);
