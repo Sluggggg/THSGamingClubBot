@@ -7,7 +7,7 @@ module.exports = {
     async execute(interaction) {
         interaction.reply({
             content: 'https://github.com/Sluggggg/THSGamingClubBot',
-            ephemeral: true
+            ephemeral: false
         });
     }
 }
