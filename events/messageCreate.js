@@ -1,4 +1,4 @@
-//import { ILLEGAL } from "./other/illegalWords.js";
+//const { ILLEGAL } = require("./other/illegalWords.js");
 
 module.exports = {
     name: 'messageCreate',
